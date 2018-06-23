@@ -43,16 +43,16 @@ $(document).ready(function () {
             url: apiUrl,
             method: 'GET'
         }).done(function (response) {
-            
+
             $('.gifs').empty();
 
             for (var i = 0; i < 10; i++) {
-                
+
                 stillImgUrl = response['data'][i]['images']['fixed_height_still']['url'];
                 animateImgUrl = response['data'][i]['images']['fixed_height']['url'];
-                
+
                 var newImg = $('<img>');
-                
+
                 newImg.attr('data-still', stillImgUrl);
                 newImg.attr('data-animate', animateImgUrl);
                 newImg.attr('src', stillImgUrl);
@@ -61,34 +61,34 @@ $(document).ready(function () {
                 //Add gifs to DOM
                 $('.gifs').append(newImg);
             }
-            
-            
+
+
         });
 
 
     }
 
     var animateGif = function () {
-        
+
         gifState = $(this).data('name');
         gifStill = $(this).data('still');
         gifAnimate = $(this).data('animate');
         if (gifState === 'still') {
-            
+
             $(this).attr('src', gifAnimate);
-            
+
             $(this).data('name', 'animate');
-            
+
         }
         else if (gifState === 'animate') {
-            
+
             $(this).attr('src', gifStill);
-            
+
             $(this).data('name', 'still');
-            
+
         }
     }
-    
+
 
 
     // Call the functions
@@ -96,7 +96,7 @@ $(document).ready(function () {
     newTopic();
     // Event Delegation
     $(document).on("click", ".giphy", renderGif);
-    $(document).on('click','.gifImage',animateGif);
+    $(document).on('click', '.gifImage', animateGif);
 
 
 
