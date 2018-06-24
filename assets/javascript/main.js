@@ -2,7 +2,7 @@ $(document).ready(function () {
     console.log("working");
 
     // Variables
-    var topics = ['guitars', 'classic cars', 'hyenas', 'the singularity', 'surfing', 'street art', 'abandoned building'];
+    var topics = ['kermit', 'guitars', 'classic cars', 'hyenas', 'the singularity', 'surfing', 'street art', 'abandoned building'];
 
     // Functions
     var mkbtn = function () {
