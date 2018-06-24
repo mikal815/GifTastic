@@ -5,6 +5,8 @@ $(document).ready(function () {
     var topics = ['kermit', 'guitars', 'classic cars', 'hyenas', 'the singularity', 'surfing', 'street art', 'abandoned building'];
 
     // Functions
+
+    // Creates buttons from the array
     var mkbtn = function () {
         $("#topics-display").empty();
 
