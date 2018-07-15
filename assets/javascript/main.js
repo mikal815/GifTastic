@@ -40,7 +40,7 @@ $(document).ready(function () {
         var topicVal = $(this).data("type");
 
         var apiKey = 'j7miIKkaJdjHIRyIL7NZJ5zSe7Jv6Rhy';
-        var apiUrl = 'http://api.giphy.com/v1/gifs/search?q=' + topicVal + '&api_key=' + apiKey;
+        var apiUrl = 'https://api.giphy.com/v1/gifs/search?q=' + topicVal + '&api_key=' + apiKey;
         $.ajax({
             url: apiUrl,
             method: 'GET'
